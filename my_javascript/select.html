@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+  function display()
+  {
+      if(document.form.city.selectedIndex=="")
+      {
+	  document.write("please select city:");
+	  } 
+	  var sel=document.getElementById("city");
+	  
+	  var selectedTest=sel.options[sel.selectedIndex].value;
+	  document.write("you have selected :"+selectedText);
+  }
+  </script>
+  </head>
+<form name="form" method="post" onSubmit="display()">
+  <pre>
+  Select your city:
+  <select name="city" id="city">
+       <option value="Select" >Select</option>
+	   <option value="Delhi" >Delhi</option>
+	   <option value="Pune" >Pune</option>
+	   <option value="Mumbai" >Mumbai</option>
+	   <option value="Gao" >Gao</option>
+	   <option value="Agra" >Agra</option>
+	      
+  </select>
+  </br>
+  <input type="submit" name="Submit" value="Submit">
+  </pre>
+ </form> 
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<StudentInfo xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="MyTest1.xsd">
+
+    <Student id="101">
+       <Name>dfds3244a</Name>
+    </Student>
+</StudentInfo>

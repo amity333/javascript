@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>check box</title>
+
+     <script language="javascript">
+     function doSearch()
+	 {
+	 
+	   var str=" ";
+	   
+	   if(document.getElementById("case1").checked)
+	   {
+	   var c1=document.getElementById("case1").value;
+	   str=str+ " " +c1+"<br>";
+	   }
+	   
+	   if(document.getElementById("case2").checked)
+	   {
+	   var c2=document.getElementById("case2").value;
+	   str=str+ " " +c2+"<br>";
+	   }
+	   
+	   if(document.getElementById("case3").checked)
+	   {
+	   var c3=document.getElementById("case3").value;
+	   str=str+ " " +c3+"<br>";
+	   }
+	   document.write("you have selected : <br><br> ");
+	   document.write(str);
+	   
+	 }
+	 function ClearForm()
+	 {
+	  frml.reset();
+	 }
+
+	 </script>
+	 </head>
+<body>
+   <h2> Select Your Subject : </h2>
+   <hr>
+   <form name="frml" method="post">
+   <input type=checkbox id="case1" value="Java Language">Java
+   <input type=checkbox id="case2" value="Linux OS" >Linux
+   <input type=checkbox id="case3" value="Oracle Database" >Oracle
+   <br>
+   <br>
+  <input type=button onClick=doSearch() value=find name=btnFind />
+   <input type=button onClick=clearForm() value=Clear name=btnClear />
+   </i>
+ 
+ </form>
+  
+</body>
+</html>

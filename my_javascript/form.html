@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<form onSubmit="submitData()">
+    <table align="center" border="1">
+	 <tbody>
+	 <tr>
+	    <td><label >Name</label>
+		<td><input type="text" id="idName" maxlength="20">
+	</tr>
+	<tr><td><label>State</label>
+	<td>
+	    <select id="state" required>
+		<option value="M">Maharashtra</option>
+		<option value="G">Goa</option>
+		</select>
+	</td></tr>
+	
+	<tr><td><input type="submit" value="Submit">
+	  <input type="button" id="OK" value="Preview" onClick="viewData()">
+	  </td></tr>
+	  </tbody>
+	  </table>
+</form>
+</head>
+<script>
+function viewData()
+{
+   anotherWindow=window.open("","","toolbar=no,status=no,width=500,height=500");
+   var name=document.getElementById("idName").value;
+   anotherWindow.document.write("<html><body><table border=1><tbody><tr><td>Name:<td>"+name+"</tr>");
+   anotherWindow.document.write("</tbody></table></body></html>");
+}
+
+function submitData()
+{
+   var z=document.getElementById("state").value;
+   if(z.length=="0")
+   {
+   alert("select a state");
+   }
+   else
+   {
+    anotherWindow=window.open("","","toolbar=no,status=no,width=200,height=100");
+    anotherWindow.document.write("<html><body><table border=1><thead><tr><th>State<th>Postal code<th>Store location</tr></thead><tbody>");
+	if(z=="M")
+	{
+	anotherWindow.document.write("<tr><td>Maharashtra<td>401<td>Mumbai</tr>");
+	}
+	else if(z=="G")
+	{
+	anotherWindow.document.write("<tr><td>Goa<td>403<td>panji</tr>");
+	}
+	anotherWindow.document.write("</tbody></table></body></html>");
+   }
+}
+</script>
+</html>
